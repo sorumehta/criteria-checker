@@ -4,7 +4,7 @@ const setActions = (self, actionArr) => {
     let actions = {}
     actionArr.forEach(action => {
         actions[action.name] = (userObj) => {
-            let final_result = false
+            let final_result = action.criteria.length <= 0
             action.criteria.forEach(criteriaSet => {
                 //console.log("evaluating criteria set:")
                 //console.log(criteriaSet)
